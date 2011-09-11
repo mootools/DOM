@@ -3,8 +3,8 @@ DOM
 */
 
 define([
-	'Base/Core/Class', 'Base/Utility/typeOf', 'Base/Utility/Object', 'Base/Utility/Array', 'Base/Utility/String', 'Slick/Finder', 'Base/Core/Accessor'
-], function(Class, typeOf, Object, Array, String, Slick, Accessor){
+	'Base/Core/Class', 'Base/Utility/typeOf', 'Base/Utility/Object', 'Base/Utility/Array', 'Base/Utility/String', 'Slick/Finder'
+], function(Class, typeOf, Object, Array, String, Slick){
 
 // node
 
@@ -359,8 +359,7 @@ Object.forEach(methods, function(getters, method){
 
 /* Attribute Getters, Setters, using Slick */
 
-Accessor.call(Element, 'Getter');
-Accessor.call(Element, 'Setter');
+Element.addAccessor('Getter').addAccessor('Setter');
 
 var properties = {};
 
