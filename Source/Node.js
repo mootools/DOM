@@ -3,8 +3,8 @@ DOM
 */
 
 define([
-	'Base/Core/Class', 'Base/Utility/typeOf', 'Base/Utility/Object', 'Base/Utility/Array', 'Base/Utility/String', 'Slick/Finder'
-], function(Class, typeOf, Object, Array, String, Slick){
+	'Base/Core/Class', 'Base/Class/Store', 'Base/Utility/typeOf', 'Base/Utility/Object', 'Base/Utility/Array', 'Base/Utility/String', 'Base/Utility/RegExp', 'Slick/Finder'
+], function(Class, Store, typeOf, Object, Array, String, RegExp_, Slick){
 
 // node
 
@@ -223,7 +223,7 @@ Element.implement({
 
 var classRegExps = {};
 var classRegExpOf = function(string){
-	return classRegExps[string] || (classRegExps[string] = new RegExp('(^|\\s)' + Slick.escapeRegExp(string) + '(?:\\s|$)'));
+	return classRegExps[string] || (classRegExps[string] = new RegExp('(^|\\s)' + RegExp_.escape(string) + '(?:\\s|$)'));
 };
 
 Element.implement({
