@@ -12,6 +12,8 @@ var html = document.documentElement;
 
 var Node = Class({
 
+	Implements: Store,
+
 	initialize: function(node){
 		this.node = node;
 	},
