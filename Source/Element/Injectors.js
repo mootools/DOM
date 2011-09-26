@@ -2,7 +2,7 @@
  * Add inject/eject and other methods to move elements.
  */
 
-define(['./select', './Element', 'Base/Host/Array'], function(select, Element, Array){
+define(['../select', '../Element', 'Base/Host/Array'], function(select, Element, Array){
 
 var inserters = {
 

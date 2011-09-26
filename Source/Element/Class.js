@@ -1,5 +1,5 @@
 
-define(['./Element', 'Base/Utility/RegExp', 'Base/Utility/String'], function(Element, RegExp_, String){
+define(['../Element', 'Base/Utility/RegExp', 'Base/Utility/String'], function(Element, RegExp_, String){
 
 var classRegExps = {};
 var classRegExpOf = function(string){
